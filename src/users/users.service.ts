@@ -17,11 +17,7 @@ export class UsersService {
       throw new NotFoundException('User not Found');
     }
 
-    return {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-    };
+    return user;
   }
 
   async updateName(id: number, name: string) {
