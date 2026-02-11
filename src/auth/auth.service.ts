@@ -62,7 +62,7 @@ export class AuthService {
   }
 
   private generateToken(user: User) {
-    const payload: JwtPayload = { sub: String(user.id), email: user.email };
+    const payload: JwtPayload = { sub: user.id, email: user.email };
     return {
       accessToken: this.jwtService.sign(payload, {
         expiresIn: this.config.get('JWT_EXPIRES_IN'),
