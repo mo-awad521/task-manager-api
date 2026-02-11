@@ -18,6 +18,9 @@ export class Task {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ nullable: false })
+  title: string;
+
   @Column({ nullable: true })
   description: string;
 
